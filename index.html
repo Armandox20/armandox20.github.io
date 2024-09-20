@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principios de Operación de ADSL y FTTH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ADSL y FTTH</h1>
+            <nav>
+                <ul>
+                    <li><a href="#adsl" onclick="smoothScroll(event, 'adsl')">ADSL</a></li>
+                    <li><a href="#ftth" onclick="smoothScroll(event, 'ftth')">FTTH</a></li>
+                    <li><a href="#conclusiones" onclick="smoothScroll(event, 'conclusiones')">Conclusiones</a></li>
+                    <li><a href="#referencias" onclick="smoothScroll(event, 'referencias')">Referencias</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+    
+    <main>
+        <section id="adsl" data-aos="fade-up">
+            <h2 id="adsl-title">Principles of Operation of ADSL</h2>
+            <p>ADSL (Asymmetric Digital Subscriber Line) technology is based on high-speed data transmission over traditional copper telephone lines. It utilizes the higher frequency band of the spectrum available on these lines, which is typically not used for voice communications. This allows telephone service and Internet access to coexist on the same line without interference (Concepto.de, n.d.).</p>
+            
+            <h3>1. Frequency and Band Division</h3>
+            <ul>
+                <li><strong>Voice Band (POTS):</strong> Occupies the lowest frequency band (0 to 4 kHz), used for traditional telephone communications (POTS - Plain Old Telephone Service) (Wikipedia, n.d.).</li>
+                <li><strong>Data Band (ADSL):</strong> Occupies the rest of the spectrum, typically between 26 kHz and 1.1 MHz. Within this band, the signal is divided into smaller frequency subchannels:
+                    <ul>
+                        <li><strong>Upstream Frequency:</strong> Between 26 kHz and 138 kHz, used for transmitting data from the user to the Internet provider (upload) (Calilio, n.d.).</li>
+                        <li><strong>Downstream Frequency:</strong> Between 138 kHz and 1.1 MHz, used for downloading data to the user (download) (Calilio, n.d.).</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>This separation ensures that users can make and receive phone calls while browsing the Internet without interference (Muy Tecnológicos, n.d.).</p>
+            
+            <h3>2. DMT (Discrete Multi-Tone) Modulation</h3>
+            <p>ADSL uses a modulation technique called DMT (Discrete Multi-Tone), which divides the bandwidth into subchannels or tones of 4.3 kHz each. Each of these subchannels is individually evaluated to determine how fast it can transmit data based on the quality of the telephone line. If a subchannel experiences interference or noise, its capacity is automatically adjusted to improve transmission (GeeksforGeeks, n.d.).</p>
+            
+            <h3>3. Distance and Attenuation</h3>
+            <p>The speed and quality of the ADSL connection depend directly on the distance between the user’s location and the ISP’s telephone exchange. The greater the distance, the higher the signal attenuation (loss of quality) (GeeksforGeeks, n.d.).</p>
+            <div class="image-container">
+                <img src="img/ADSL.png" alt="ADSL" />
+                <h4>ADSL Operation</h4>
+            </div>
+        </section>
+
+        <section id="ftth" data-aos="fade-up">
+            <h2 id="ftth-title">Principles of Operation of FTTH</h2>
+            <p>FTTH (Fiber to the Home) technology provides Internet access through fiber optic cables that reach directly to the user’s home. Unlike traditional copper cables, fiber optic cables are made of glass or plastic, allowing for faster data transfer speeds and less interference (LovTechnology, n.d.).</p>
+            
+            <h3>1. Components of the FTTH Network</h3>
+            <ul>
+                <li><strong>Internet Service Provider (ISP):</strong> Provides the Internet connection.</li>
+                <li><strong>Fiber Optic Network:</strong> The infrastructure that connects the user’s home to the service provider.</li>
+                <li><strong>User Equipment:</strong> The equipment used by the user to connect to the Internet, such as a router or modem (Keyfibre, n.d.).</li>
+            </ul>
+            
+            <h3>2. Basic Operation</h3>
+            <p>Fiber optics transmit information in the form of light, which travels through the cable at the speed of light, allowing for faster data transfer and less interference. The FTTH connection consists of three main parts: the ISP, the fiber optic network, and the user equipment (RedesZone, 2024).</p>
+            
+            <h3>3. Advantages of FTTH</h3>
+            <ul>
+                <li><strong>Faster Speeds:</strong> Allows for significantly faster Internet speeds.</li>
+                <li><strong>More Reliable Connections:</strong> Offers more stable connections with less susceptibility to interference.</li>
+                <li><strong>Greater Bandwidth:</strong> Supports a higher volume of data simultaneously.</li>
+                <li><strong>Lower Latency:</strong> Reduces the delay time in data transmission (LovTechnology, n.d.).</li>
+            </ul>
+            <div class="image-container"></div>
+                <img src="img/FTTH.jpg" alt="FTTH" />
+                <h4>FTTH Operation</h4>
+            </div>
+        </section>
+
+        <section id="conclusiones" data-aos="fade-up">
+            <h2>Conclusions</h2>
+            <div class="grid-container">
+                <div class="grid-item" onclick="showConclusion(0)">Armando</div>
+                <div class="grid-item" onclick="showConclusion(1)">Alvaro</div>
+                <div class="grid-item" onclick="showConclusion(2)">Oscar Marquez</div>
+                <div class="grid-item" onclick="showConclusion(3)">Jesus</div>
+                <div class="grid-item" onclick="showConclusion(4)">Oscar Juarez</div>
+            </div>
+            <div class="conclusion-display" id="conclusion-display">
+                <strong id="conclusion-title">Select an integral</strong>
+                <p id="conclusion-text"></p>
+            </div>
+        </section>        
+
+        <section id="referencias" data-aos="fade-up">
+            <h2>References</h2>
+            <ul>
+                <li>Calilio. (n.d.). What is ADSL. Retrieved from <a href="https://www.calilio.com/blogs/what-is-adsl" target="_blank">https://www.calilio.com/blogs/what-is-adsl</a></li>
+                <li>Concepto.de. (n.d.). ADSL. Retrieved from <a href="https://concepto.de/adsl/" target="_blank">https://concepto.de/adsl/</a></li>
+                <li>GeeksforGeeks. (n.d.). Introduction to Asymmetric Digital Subscriber Line (ADSL). Retrieved from <a href="https://www.geeksforgegeeks.org/introduction-to-asymmetric-digital-subscriber-line-adsl/" target="_blank">https://www.geeksforgeeks.org/introduction-to-asymmetric-digital-subscriber-line-adsl/</a></li>
+                <li>Keyfibre. (n.d.). Concepts and Applications of FTTH Networks. Retrieved from <a href="https://www.keyfibre.com/ftth-networks/" target="_blank">https://www.keyfibre.com/ftth-networks/</a></li>
+                <li>LovTechnology. (n.d.). What is FTTH (Fiber To The Home): How it Works and What it is Used For?. Retrieved from <a href="https://lovtechnology.com/what-is-ftth-fiber-to-the-home-how-it-works-and-what-it-is-used-for/" target="_blank">https://lovtechnology.com/what-is-ftth-fiber-to-the-home-how-it-works-and-what-it-is-used-for/</a></li>
+                <li>Muy Tecnológicos. (n.d.). ADSL. Retrieved from <a href="https://muytecnologicos.com/diccionario-tecnologico/adsl" target="_blank">https://muytecnologicos.com/diccionario-tecnologico/adsl</a></li>
+                <li>RedesZone. (2024). GPON Technology: What it is and How FTTH Fiber Optic Networks Work. Retrieved from <a href="https://www.redeszone.net/tutoriales/redes-cable/ftth-gpon-technology-what-it-is-how-it-works/" target="_blank">https://www.redeszone.net/tutoriales/redes-cable/ftth-gpon-technology-what-it-is-how-it-works/</a></li>
+                <li>Wikipedia. (n.d.). ADSL. In Wikipedia. Retrieved from <a href="https://en.wikipedia.org/wiki/ADSL" target="_blank">https://en.wikipedia.org/wiki/ADSL</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script>
+        const conclusions = [
+            { title: "Armando", text: "ADSL and FTTH represent two distinct approaches to providing Internet services, each with its own advantages and disadvantages. ADSL, which uses copper telephone lines, offers transmission speeds suitable for many applications, but its performance is limited by the distance between the user and the telephone exchange. This results in a decrease in connection speed and quality as the distance increases. On the other hand, FTTH, which employs fiber optic cables, provides significantly higher speeds and greater bandwidth capacity. Fiber optics do not suffer from the same distance limitations as copper, allowing optimal speeds to be maintained even over long distances. In addition, FTTH offers greater resistance to interference and better quality of service, making it the preferred choice for applications requiring high performance, such as high-definition video streaming and video conferencing." },
+            { title: "Alvaro", text: "ADSL (Asymmetric Digital Subscriber Line) and FTTH (Fiber to the Home) are two distinct technologies for providing internet access, each with its unique operational principles. ADSL uses traditional copper telephone lines, transmitting data asymmetrically, meaning higher download speeds than upload speeds. It is limited by distance from the service provider’s central office, and performance decreases with longer distances. On the other hand, FTTH employs optical fiber directly to the home, enabling significantly higher data speeds, both for download and upload, without the distance-related limitations of ADSL. Fiber optics allow the transmission of data as light pulses, offering more bandwidth, better reliability, and lower latency." },
+            { title: "Oscar Marquez", text: "ADSL is an internet access technology that has allowed millions of users around the world to connect to the network economically and efficiently through copper telephone lines. Although it has limitations in terms of speed and distance, it remains a viable solution for many households, especially those without access to fiber optic or high-speed cable connections." },
+            { title: "Jesus", text: "FTTH (Fiber-to-the-Home) represents a more advanced technology, utilizing optical fibers to deliver exceptional speeds, stability, and low latency. This makes it ideal for high-demand applications like ultra-high-definition streaming and supporting multiple devices simultaneously. FTTH's resistance to electromagnetic interference ensures a more stable and reliable connection compared to traditional copper cables. Fiber-optic cables carry data using light signals, allowing for much higher bandwidth and faster transmission speeds than ADSL, which relies on existing telephone lines and has a more limited bandwidth capacity." },
+            { title: "Oscar Juarez", text: "I understood that an FTTH has better benefits as a customer since we have a use of the internet service that will help us have a better speed and a better bandwidth. I understood how an FTTH works, where it comes from, how it is transmitted, what protocols it needs and the different types of connections that we can give it and which is the most efficient with the lowest possible cost. I also understood how the optical fiber works, which goes through pulses of light, as well as knowing what type of access is better, and their comparisons that there are as Between ADSL and FTTH." }
+        ];
+    
+        function showConclusion(index) {
+            const conclusionTitle = document.getElementById("conclusion-title");
+            const conclusionText = document.getElementById("conclusion-text");
+            conclusionTitle.innerText = conclusions[index].title;
+            conclusionText.innerText = conclusions[index].text;
+        }
+    </script>
+    
+    <script>
+        function smoothScroll(event, targetId) {
+            event.preventDefault(); // Evita el comportamiento por defecto del enlace
+            const target = document.getElementById(targetId);
+            const topPosition = target.getBoundingClientRect().top + window.pageYOffset - 50; // Ajuste de 50px
+            window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth' // Desplazamiento suave
+            });
+        }
+    </script>
+    
+    
+</body>
+</html>

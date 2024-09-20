@@ -1,0 +1,171 @@
+/* Importar la fuente */
+body {
+    font-family: 'Open Sans';
+    background-color: #f5f5f5;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que se envuelvan */
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px; /* Botones ovalados */
+    transition: all 0.3s; /* Transición suave */
+}
+
+nav ul li a:hover {
+    background-color: #007bff; /* Fondo al pasar el mouse */
+    color: white; /* Cambia color del texto al hover */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #555555;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #444444;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #555555;
+    margin-top: 20px;
+}
+
+p, ul {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre los elementos */
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    background-color: #f4f4f4; /* Fondo de cada item */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer; /* Indica que es clickeable */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.grid-item:hover {
+    background-color: #e0e0e0; /* Cambio de color al pasar el mouse */
+}
+
+.conclusion-display {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menú en columna */
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+        gap: 10px; /* Espacio entre los botones */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 10px 15px; /* Menos padding en pantallas muy pequeñas */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
