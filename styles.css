@@ -1,6 +1,6 @@
 /* Importar la fuente */
 body {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     background-color: #f5f5f5;
     color: #333333;
     margin: 0;
@@ -9,12 +9,13 @@ body {
 
 header {
     background-color: #ffffff;
-    padding: 1px;
+    padding: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header-container {
@@ -22,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se acomoden en nuevas líneas si es necesario */
 }
 
 nav ul {
@@ -29,10 +31,12 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Permitir que se envuelvan */
+    justify-content: flex-end;
+    overflow-x: auto; /* Permitir scroll horizontal si es necesario */
 }
 
 nav ul li {
+    display: inline-block;
     margin-left: 15px;
 }
 
@@ -41,12 +45,13 @@ nav ul li a {
     color: #333;
     padding: 10px 20px;
     border-radius: 50px; /* Botones ovalados */
-    transition: all 0.3s; /* Transición suave */
+    background-color: #f0f0f0; /* Fondo de los botones */
+    transition: all 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #007bff; /* Fondo al pasar el mouse */
-    color: white; /* Cambia color del texto al hover */
+    background-color: #007bff;
+    color: white;
 }
 
 header h1 {
@@ -82,6 +87,7 @@ h3 {
 
 p, ul {
     line-height: 1.6;
+    text-align: justify; /* Justificar texto */
 }
 
 ul {
@@ -91,6 +97,7 @@ ul {
 
 li {
     margin-bottom: 10px;
+    text-align: justify; /* Justificar texto en listas */
 }
 
 a {
@@ -100,35 +107,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Espacio entre los elementos */
-    margin-bottom: 20px;
-}
-
-.grid-item {
-    background-color: #f4f4f4; /* Fondo de cada item */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    cursor: pointer; /* Indica que es clickeable */
-    transition: background-color 0.3s; /* Transición suave */
-}
-
-.grid-item:hover {
-    background-color: #e0e0e0; /* Cambio de color al pasar el mouse */
-}
-
-.conclusion-display {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
 footer {
@@ -142,30 +120,43 @@ footer {
     width: 100%;
 }
 
-/* Media Queries para Responsividad */
+/* Ajuste de imágenes para que se adapten al tamaño del contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrar las imágenes */
+}
+
+/* Media Queries para Pantallas Pequeñas */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
-        align-items: flex-start;
+    .header-container {
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center;
     }
 
     nav ul {
-        flex-direction: column; /* Menú en columna */
-        width: 100%; /* Ancho completo para pantallas pequeñas */
-        gap: 10px; /* Espacio entre los botones */
+        justify-content: center; /* Mantener el menú centrado */
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
     }
 
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
-    }
-}
-
-@media (max-width: 480px) {
-    nav a {
-        padding: 10px 15px; /* Menos padding en pantallas muy pequeñas */
+    nav ul li a {
+        font-size: 0.9em; /* Tamaño de fuente reducido en pantallas pequeñas */
+        padding: 8px 15px; /* Ajustar el padding */
     }
 
-    .grid-container {
-        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    header h1 {
+        font-size: 1.8em; /* Reducir tamaño del título */
+        margin-bottom: 10px;
+    }
+
+    main, section, h2, h3 {
+        text-align: center; /* Centrar el contenido */
+    }
+
+    /* Asegurar que las imágenes se ajusten correctamente en pantallas pequeñas */
+    img {
+        width: 100%;
+        height: auto;
     }
 }
